@@ -27,6 +27,8 @@ export class AppDom {
   async displayRecipeCard(search) {
     const recipes = await this.storage.getRecipeByName(search);
     if (recipes && recipes.length > 0) {
+      
+
       RecipeCard(recipes);
     } else {
       console.warn("Aucune recette trouvée.");
