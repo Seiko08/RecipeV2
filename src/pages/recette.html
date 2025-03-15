@@ -1,51 +1,43 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Mes Recettes</title>
-  </head>
 
-  <body>
-    <header class="bg-dark"></header>
-    <main>
-      <div class="search-container">
-        <input
-          type="text"
-          id="search-bar"
-          placeholder="Rechercher une recette..."
-        />
-        <button id="search-button">🔍</button>
-      </div>
-      <div class="container text-center mt-5">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Mes Recettes</title>
+</head>
+
+<body>
+  <h2>Les Recettes 🍽️</h2>
+  <header class="bg-dark"></header>
+  <main>
+    <div class="search-container">
+      <input type="text" id="search-bar" placeholder="Rechercher une recette..." />
+      <button id="search-button">🔍</button>
+    </div>
+
+    <section class="recettes">
+      
+      <div class="container text-center">
         <div class="row" id="recipes-container">
-          <div class="col-md-4">
-            <div class="plat">Nom du Plat</div>
-
-            <br />
-            <div class="description">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa
-              totam vero autem rem dolorum nesciunt quis nisi vitae fugiat,
-              nobis repellendus omnis. Ut similique nisi nihil eligendi in
-              numquam cum.
-            </div>
-          </div>
-
         </div>
       </div>
-    </main>
+    </section>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      integrity="sha384-QF3kqpKjV1yU0w5fLbsykAnOw1EJ7TbOG46wFzENhFSyTJM12Sn1uB5vSIuMaVWG"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script src="/src/js/script.js"></script>
-  </body>
+    <br />
+    <div class="description">
+
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-QF3kqpKjV1yU0w5fLbsykAnOw1EJ7TbOG46wFzENhFSyTJM12Sn1uB5vSIuMaVWG"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="/src/js/script.js"></script>
+</body>
+
 </html>

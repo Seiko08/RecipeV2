@@ -96,15 +96,55 @@ h2 {
         width: 100%;
         margin-bottom: 10px;
     }
+    #animated-title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 20px;
+        opacity: 0;
+        animation: fadeIn 2s ease-in-out forwards;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    .idee-jour {
+        text-align: center;
+        margin: 50px auto;
+        padding: 20px;
+        background: #ffebcc;
+        border-radius: 10px;
+        width: 60%;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+    
+    .idee-jour.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .idee {
+        padding: 10px;
+        font-size: 1.2rem;
+    }
+    
+    #idee-titre {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #d35400;
+    }
+    
+    #idee-description {
+        color: #555;
+    }
+    
+    
+    
+        
 }
-/* #search-button {
-    padding: 10px;
-    font-size: 1.1em;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out; /* Animation fluide 
-}*/
+
 

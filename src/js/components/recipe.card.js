@@ -13,7 +13,7 @@ export const RecipeCard = (recipes) => {
         data-ingredients="${recipe.ingredients}" 
         data-instructions="${recipe.instructions}" 
         data-bs-toggle="modal" data-bs-target="#recipeModal">
-        See more
+        Voir la recette
       </button>
     `; 
 
@@ -21,14 +21,12 @@ export const RecipeCard = (recipes) => {
     container.appendChild(div);
   }
 
-  // Gérer l'affichage des détails dans le modal
   document.querySelectorAll(".see-more").forEach(button => {
     button.addEventListener("click", function () {
       const title = this.getAttribute("data-title");
       const ingredients = this.getAttribute("data-ingredients");
       const instructions = this.getAttribute("data-instructions");
 
-      // Mettre à jour le contenu du modal
       document.getElementById("modal-title").textContent = title;
       document.getElementById("modal-ingredients").textContent = ingredients;
       document.getElementById("modal-instructions").textContent = instructions;
