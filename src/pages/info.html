@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,28 +7,31 @@
     <title>Informations</title>
 </head>
 
-<body>
-    <main>
+<body class="info-page">
+    <main class="info-container">
         <h1>📌 Projet Scolaire</h1>
-        <p>Ce projet a été réalisé dans le cadre du cours de <strong>Programmation et Développement Web</strong>.</p>
+        <p class="info-intro">Ce projet a été réalisé dans le cadre du cours de <strong>Programmation et Développement Web</strong>. Il constitue l’épreuve finale de ce module et démontre les compétences acquises tout en respectant les consignes suivantes :</p>
 
-        <p>Il constitue l’épreuve finale de ce module et démontre les compétences acquises tout en respectant les consignes suivantes :</p>
+        <section class="info-section">
+            <h2>📝 Contraintes du projet</h2>
+            <ul class="info-list">
+                <li><span>🗄️</span> Interagir avec une base de données IndexedDB.</li>
+                <li><span>📦</span> Utiliser une librairie externe installée via NPM.</li>
+                <li><span>🎯</span> Implémenter au moins 3 EventListeners déclenchant des actions.</li>
+                <li><span>🌍</span> Utiliser des requêtes AJAX pour consommer une API REST.</li>
+                <li><span>🎭</span> Ajouter au moins 3 animations JavaScript.</li>
+                <li><span>⚡</span> Application 100% dynamique sans rechargement de page.</li>
+                <li><span>🔗</span> Versionner le projet sur GitHub.</li>
+                <li><span>📝</span> Effectuer des commits réguliers à chaque avancée.</li>
+            </ul>
+        </section>
 
-        <h2>📝 Contraintes du projet</h2>
-        <ul>
-            <li>✅ Interagir avec une base de données IndexedDB (côté navigateur).</li>
-            <li>✅ Utiliser au moins une librairie externe ,installée via NPM <br> (à valider avec le chargé de cours).</li>
-            <li>✅ Implémenter au moins 3 EventListeners déclenchant des actions.</li>
-            <li>✅ Utiliser des requêtes AJAX pour consommer une API REST.</li>
-            <li>✅ Ajouter au moins 3 animations JavaScript (popup, déplacement d’éléments, toggle, etc.).</li>
-            <li>✅ Application 100% dynamique : aucun rechargement de page.</li>
-            <li>✅ Versionner le projet sur GitHub  (mode privé), accessible par le chargé de cours.</li>
-            <li>✅ Effectuer des commits réguliers à chaque avancée.</li>
-        </ul>
-
-        <h2>📧 Validation du sujet</h2>
-        <p>Le sujet est libre mais doit être validé au préalable par le chargé de cours. Cette validation doit être effectuée par <strong>email</strong> afin de conserver une trace écrite.</p>
+        <section class="info-section">
+            <h2>📧 Validation du sujet</h2>
+            <p class="info-text">Le sujet est libre mais doit être validé par le chargé de cours. Cette validation doit être effectuée par <strong>email</strong> afin de conserver une trace écrite.</p>
+        </section>
     </main>
-</body>
 
+    <script src="script.js"></script>
+</body>
 </html>
