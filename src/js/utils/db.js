@@ -1,4 +1,13 @@
 import { ApiRequest } from "../api/api.js";
+
+// gère la casse et les accents lors de la recherche
+function normalizeText(str) {
+  return str
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "") 
+    .toLowerCase(); 
+}
+
 export class Datastorage {
   constructor() {
     this.apiRequest = new ApiRequest();
@@ -21,7 +30,8 @@ export class Datastorage {
   async getRecipeByName(name) {
     try {
       const recipes = await this.getRecipes();
-      let recipe = recipes.filter((r) => r.tag.toLowerCase() === name);
+      let recipe = recipes.filter((r) => normalizeText(r.tag) === normalizeText(name));
+
 
       if (recipe.length < 15) {
         const response = await this.apiRequest.fetchData(name);
