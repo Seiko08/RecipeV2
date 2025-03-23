@@ -1,10 +1,10 @@
+/* ==== STYLES GÉNÉRAUX ==== */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f9;
     color: #333;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
 }
 
 main {
@@ -16,6 +16,7 @@ main {
     border-radius: 10px;
 }
 
+/* ==== TITRES ==== */
 h1 {
     text-align: center;
     color: #007BFF;
@@ -29,6 +30,7 @@ h2 {
     padding-bottom: 5px;
 }
 
+/* ==== BARRE DE RECHERCHE ==== */
 .search-container {
     display: flex;
     justify-content: center;
@@ -58,6 +60,7 @@ h2 {
     background-color: #0056b3;
 }
 
+/* ==== RECETTE ==== */
 #recette {
     padding: 20px;
     background-color: #f9f9f9;
@@ -72,12 +75,9 @@ h2 {
     font-size: 1.1em;
 }
 
+/* ==== PAGE INFO ==== */
 .info-page {
-    font-family: 'Arial', sans-serif;
     background: #f4f4f4;
-    color: #333;
-    margin: 0;
-    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -138,6 +138,7 @@ h2 {
     color: #2980b9;
 }
 
+/* ==== PAGE 404 ==== */
 .error-page {
     font-family: Arial, sans-serif;
     background: #f8f9fa;
@@ -156,12 +157,12 @@ h2 {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-µ.error-container h1 {
+.error-container h1 {
     font-size: 2rem;
     color: #e74c3c;
 }
 
-µ.error-btn {
+.error-btn {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
@@ -176,6 +177,104 @@ h2 {
     background: #2980b9;
 }
 
+/* ==== MODALE POP-UP RECIPE ==== */
+.recipe-modal {
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff8f3;
+    animation: popupFade 0.5s ease-in-out;
+}
+
+@keyframes popupFade {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.recipe-modal h5 {
+    color: #d35400;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.recipe-modal .modal-body p {
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.recipe-modal .btn-close {
+    background-color: #f5c6a5;
+    border-radius: 50%;
+    padding: 6px;
+}
+
+.recipe-modal .btn-secondary {
+    background-color: #e67e22;
+    border: none;
+}
+
+.recipe-modal .btn-secondary:hover {
+    background-color: #d35400;
+}
+
+/* ==== ACCUEIL : TITRE ET IDÉE ==== */
+#animated-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.idee-jour {
+    text-align: center;
+    margin: 50px auto;
+    padding: 20px;
+    background: #ffebcc;
+    border-radius: 10px;
+    width: 60%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.idee-jour.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.idee {
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+#idee-titre {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #d35400;
+}
+
+#idee-description {
+    color: #555;
+}
+
+/* ==== RESPONSIVE ==== */
 @media (max-width: 768px) {
     main {
         width: 90%;
@@ -195,56 +294,7 @@ h2 {
         margin-bottom: 10px;
     }
 
-    #animated-title {
-        font-size: 2.5rem;
-        font-weight: bold;
-        text-align: center;
-        margin-top: 20px;
-        opacity: 0;
-        animation: fadeIn 2s ease-in-out forwards;
-    }
-
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-        }
-
-        to {
-            opacity: 1;
-        }
-    }
-
     .idee-jour {
-        text-align: center;
-        margin: 50px auto;
-        padding: 20px;
-        background: #ffebcc;
-        border-radius: 10px;
-        width: 60%;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 1s ease-out, transform 1s ease-out;
+        width: 90%;
     }
-
-    .idee-jour.visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    .idee {
-        padding: 10px;
-        font-size: 1.2rem;
-    }
-
-    #idee-titre {
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: #d35400;
-    }
-
-    #idee-description {
-        color: #555;
-    }
-
 }
