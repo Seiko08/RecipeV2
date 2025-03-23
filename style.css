@@ -1,4 +1,4 @@
-/* ==== STYLES GÉNÉRAUX ==== */
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f9;
@@ -16,7 +16,7 @@ main {
     border-radius: 10px;
 }
 
-/* ==== TITRES ==== */
+
 h1 {
     text-align: center;
     color: #007BFF;
@@ -30,7 +30,7 @@ h2 {
     padding-bottom: 5px;
 }
 
-/* ==== BARRE DE RECHERCHE ==== */
+/*   BARRE DE RECHERCHE   */
 .search-container {
     display: flex;
     justify-content: center;
@@ -60,7 +60,7 @@ h2 {
     background-color: #0056b3;
 }
 
-/* ==== RECETTE ==== */
+/*RECETTE */
 #recette {
     padding: 20px;
     background-color: #f9f9f9;
@@ -75,7 +75,7 @@ h2 {
     font-size: 1.1em;
 }
 
-/* ==== PAGE INFO ==== */
+/* PAGE INFO*/
 .info-page {
     background: #f4f4f4;
     display: flex;
@@ -138,7 +138,7 @@ h2 {
     color: #2980b9;
 }
 
-/* ==== PAGE 404 ==== */
+/*   PAGE 404   */
 .error-page {
     font-family: Arial, sans-serif;
     background: #f8f9fa;
@@ -177,7 +177,7 @@ h2 {
     background: #2980b9;
 }
 
-/* ==== MODALE POP-UP RECIPE ==== */
+/* POP-UP RECIPE   */
 .recipe-modal {
     border-radius: 12px;
     overflow: hidden;
@@ -222,7 +222,7 @@ h2 {
     background-color: #d35400;
 }
 
-/* ==== ACCUEIL : TITRE ET IDÉE ==== */
+/*   ACCUEIL */
 #animated-title {
     font-size: 2.5rem;
     font-weight: bold;
@@ -274,7 +274,7 @@ h2 {
     color: #555;
 }
 
-/* ==== RESPONSIVE ==== */
+/*   RESPONSIVE   */
 @media (max-width: 768px) {
     main {
         width: 90%;

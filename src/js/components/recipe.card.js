@@ -1,18 +1,14 @@
-// src/js/components/recipe.card.js
 
 export const RecipeCard = (recipes) => {
   const container = document.getElementById("recipes-container");
   container.innerHTML = "";
 
   recipes.forEach((recipe) => {
-    // Valeurs par défaut
     const title = recipe.title || "Titre inconnu";
-    // Pour l'extrait, on peut utiliser les 100 premiers caractères de instructions
     const instructionsExcerpt = recipe.instructions
       ? recipe.instructions.substring(0, 100) + "..."
       : "Aucune instruction disponible.";
     
-    // Création de la carte
     const cardDiv = document.createElement("div");
     cardDiv.classList.add("col-md-4", "mt-3");
 
@@ -27,10 +23,8 @@ export const RecipeCard = (recipes) => {
     `;
     container.appendChild(cardDiv);
 
-    // Ajouter un listener pour ouvrir la modale
     const btn = cardDiv.querySelector(".btn-see-more");
     btn.addEventListener("click", () => {
-      // On prépare un objet avec les données nécessaires
       const recipeData = {
         title: title,
         instructions: recipe.instructions || "Aucune instruction disponible.",
@@ -41,7 +35,6 @@ export const RecipeCard = (recipes) => {
 
       showRecipeDetails(recipeData);
 
-      // Ouvrir la modale avec Bootstrap
       const modalEl = document.getElementById("recipeModal");
       const modal = new bootstrap.Modal(modalEl);
       modal.show();
@@ -49,7 +42,6 @@ export const RecipeCard = (recipes) => {
   });
 };
 
-// Fonction globale pour remplir la modale avec les données d'une recette
 window.showRecipeDetails = (recipe) => {
   document.getElementById("recipeModalLabel").textContent = recipe.title;
   document.getElementById("recipeInstructions").textContent = recipe.instructions;
@@ -68,7 +60,6 @@ window.showRecipeDetails = (recipe) => {
     ingredientsContainer.innerHTML = "<li class='list-group-item'>Aucun ingrédient listé.</li>";
   }
 
-  // Afficher les servings (si disponibles)
   const servingsEl = document.getElementById("recipeServings");
   servingsEl.textContent = recipe.servings ? `For ${recipe.servings}` : "";
 };

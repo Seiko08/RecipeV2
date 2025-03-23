@@ -5,14 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mes Recettes</title>
   
-  <!-- Bootstrap CSS -->
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     rel="stylesheet"
     crossorigin="anonymous"
   />
   
-  <!-- Votre CSS personnalisé -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -21,21 +19,17 @@
   </header>
 
   <main>
-    <!-- Barre de recherche -->
     <div class="search-container mt-4 text-center">
       <input type="text" id="search-bar" placeholder="Rechercher une recette..." class="form-control d-inline-block w-75" />
       <button id="search-button" class="btn btn-primary ms-2">🔍</button>
     </div>
 
-    <!-- Conteneur des cartes -->
     <div class="container mt-5">
       <div class="row" id="recipes-container">
-        <!-- Les cartes de recettes seront injectées ici dynamiquement -->
       </div>
     </div>
   </main>
 
-  <!-- Modale personnalisée pour afficher une recette -->
   <div class="modal fade" id="recipeModal" tabindex="-1" aria-labelledby="recipeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content recipe-modal">
@@ -56,13 +50,11 @@
     </div>
   </div>
 
-  <!-- Bootstrap JS -->
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     crossorigin="anonymous"
   ></script>
   
-  <!-- Votre script principal -->
   <script src="src/js/script.js"></script>
 </body>
 </html>
